@@ -228,7 +228,10 @@ def get_inventory_a(hostid,invent_a):
     data_j = json.dumps(j.json(), indent=4, sort_keys=True)
     data_j_1 = json.loads(data_j)
     dat = (data_j_1['result'][0]['inventory'][invent_a])
-    return dat
+    if dat == []:
+        return "none"
+    else:
+        return dat
 
 def get_inventory_b(hostid,invent_b):
     j = requests.post(ZABBIX_API_URL,
@@ -249,7 +252,10 @@ def get_inventory_b(hostid,invent_b):
     data_j = json.dumps(j.json(), indent=4, sort_keys=True)
     data_j_1 = json.loads(data_j)
     dat = (data_j_1['result'][0]['inventory'][invent_b])
-    return dat
+    if dat == []:
+        return "none"
+    else:
+        return dat
 
 def get_inventory_c(hostid,invent_c):
     j = requests.post(ZABBIX_API_URL,
@@ -270,7 +276,10 @@ def get_inventory_c(hostid,invent_c):
     data_j = json.dumps(j.json(), indent=4, sort_keys=True)
     data_j_1 = json.loads(data_j)
     dat = (data_j_1['result'][0]['inventory'][invent_c])
-    return dat
+    if dat == []:
+        return "none"
+    else:
+        return dat
 
 #======================== ПОЛУЧЕНИЕ ИНВЕНТАРНЫХ ДАННЫХ. КОНЕЦ =============================
 
