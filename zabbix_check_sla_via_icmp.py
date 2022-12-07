@@ -227,10 +227,11 @@ def get_inventory_a(hostid,invent_a):
                 })
     data_j = json.dumps(j.json(), indent=4, sort_keys=True)
     data_j_1 = json.loads(data_j)
-    dat = (data_j_1['result'][0]['inventory'][invent_a])
-    if dat == []:
+    print(data_j)
+    if data_j_1['result'][0]['inventory'] == []:
         return "none"
-    else:
+    else: 
+        dat = (data_j_1['result'][0]['inventory'][invent_a])
         return dat
 
 def get_inventory_b(hostid,invent_b):
@@ -251,10 +252,10 @@ def get_inventory_b(hostid,invent_b):
                 })
     data_j = json.dumps(j.json(), indent=4, sort_keys=True)
     data_j_1 = json.loads(data_j)
-    dat = (data_j_1['result'][0]['inventory'][invent_b])
-    if dat == []:
+    if data_j_1['result'][0]['inventory'] == []:
         return "none"
-    else:
+    else: 
+        dat = (data_j_1['result'][0]['inventory'][invent_b])
         return dat
 
 def get_inventory_c(hostid,invent_c):
@@ -275,10 +276,10 @@ def get_inventory_c(hostid,invent_c):
                 })
     data_j = json.dumps(j.json(), indent=4, sort_keys=True)
     data_j_1 = json.loads(data_j)
-    dat = (data_j_1['result'][0]['inventory'][invent_c])
-    if dat == []:
+    if data_j_1['result'][0]['inventory'] == []:
         return "none"
-    else:
+    else: 
+        dat = (data_j_1['result'][0]['inventory'][invent_c])
         return dat
 
 #======================== ПОЛУЧЕНИЕ ИНВЕНТАРНЫХ ДАННЫХ. КОНЕЦ =============================
